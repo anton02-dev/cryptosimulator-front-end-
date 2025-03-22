@@ -243,7 +243,7 @@ $(function () {
         if (bool) {
             $(".container").css("display", "block");
         } else {
-            $(".container").css("display", "none");
+            $(".container").css("display", "block");
         }
     }
 
