@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binance script</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Binance</h1>
+            <input placeholder="Amount to add" id="input">
+            <button id="addBalance" onclick="addBalance()">Add Balance</button>
+            <button id="withdraw" onclick="withdraw()">Withdraw</button>
+            <div class="portfolio">
+                Balance: $<span id="balance">10000.00</span>
+                <br>
+                BTC: <span id="btc-amount">0.00</span>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="priceChart"></canvas>
+        </div>
+
+        <div class="trading-panel">
+            <div class="trade-box">
+                <h2>Buy BTC</h2>
+                <div class="price">Current Price: $<span id="current-price">0</span></div>
+                <input type="number" class="amount-input" id="buy-amount" placeholder="Amount in USD">
+                <button class="buy-btn" onclick="executeBuy()">Buy BTC</button>
+            </div>
+            <div class="trade-box">
+                <h2>Sell BTC</h2>
+                <div class="price">Current Price: $<span id="current-price-sell">0</span></div>
+                <input type="number" class="amount-input" id="sell-amount" placeholder="Amount in BTC">
+                <button class="sell-btn" onclick="executeSell()">Sell BTC</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
